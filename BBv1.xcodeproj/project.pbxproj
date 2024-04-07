@@ -14,6 +14,19 @@
 		E01F4F432BB733070047B785 /* BBv1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F422BB733070047B785 /* BBv1Tests.swift */; };
 		E01F4F4D2BB733070047B785 /* BBv1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F4C2BB733070047B785 /* BBv1UITests.swift */; };
 		E01F4F4F2BB733070047B785 /* BBv1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F4E2BB733070047B785 /* BBv1UITestsLaunchTests.swift */; };
+		E01F4F5D2BB733A20047B785 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F5C2BB733A20047B785 /* HealthKitManager.swift */; };
+		E01F4F602BB745F40047B785 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F5F2BB745F40047B785 /* ActivityView.swift */; };
+		E01F4F652BB747870047B785 /* DailyStepCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F642BB747870047B785 /* DailyStepCardView.swift */; };
+		E01F4F692BB95E530047B785 /* DailySleepCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F682BB95E530047B785 /* DailySleepCardView.swift */; };
+		E01F4F6B2BBB25A00047B785 /* WeeklyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F6A2BBB25A00047B785 /* WeeklyView.swift */; };
+		E01F4F6F2BBB260F0047B785 /* WeeklyStepCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F6E2BBB260F0047B785 /* WeeklyStepCardView.swift */; };
+		E01F4F712BBC22AB0047B785 /* WeeklyMacrosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F702BBC22AB0047B785 /* WeeklyMacrosView.swift */; };
+		E01F4F732BBC25AE0047B785 /* DailyBodyWeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F4F722BBC25AE0047B785 /* DailyBodyWeightView.swift */; };
+		E0E4166C2BC16C0C002E8CBE /* DateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4166B2BC16C0B002E8CBE /* DateHeaderView.swift */; };
+		E0E4166E2BC1D66D002E8CBE /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4166D2BC1D66D002E8CBE /* PieChartView.swift */; };
+		E0E416702BC1D799002E8CBE /* PieSliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4166F2BC1D799002E8CBE /* PieSliceView.swift */; };
+		E0E416722BC1E35A002E8CBE /* MockHealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416712BC1E35A002E8CBE /* MockHealthKitManager.swift */; };
+		E0E416742BC2A772002E8CBE /* DailyMacroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416732BC2A772002E8CBE /* DailyMacroView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +57,20 @@
 		E01F4F482BB733070047B785 /* BBv1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBv1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01F4F4C2BB733070047B785 /* BBv1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBv1UITests.swift; sourceTree = "<group>"; };
 		E01F4F4E2BB733070047B785 /* BBv1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBv1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E01F4F5B2BB733650047B785 /* BBv1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BBv1.entitlements; sourceTree = "<group>"; };
+		E01F4F5C2BB733A20047B785 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		E01F4F5F2BB745F40047B785 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		E01F4F642BB747870047B785 /* DailyStepCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStepCardView.swift; sourceTree = "<group>"; };
+		E01F4F682BB95E530047B785 /* DailySleepCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySleepCardView.swift; sourceTree = "<group>"; };
+		E01F4F6A2BBB25A00047B785 /* WeeklyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyView.swift; sourceTree = "<group>"; };
+		E01F4F6E2BBB260F0047B785 /* WeeklyStepCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyStepCardView.swift; sourceTree = "<group>"; };
+		E01F4F702BBC22AB0047B785 /* WeeklyMacrosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyMacrosView.swift; sourceTree = "<group>"; };
+		E01F4F722BBC25AE0047B785 /* DailyBodyWeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBodyWeightView.swift; sourceTree = "<group>"; };
+		E0E4166B2BC16C0B002E8CBE /* DateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderView.swift; sourceTree = "<group>"; };
+		E0E4166D2BC1D66D002E8CBE /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		E0E4166F2BC1D799002E8CBE /* PieSliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSliceView.swift; sourceTree = "<group>"; };
+		E0E416712BC1E35A002E8CBE /* MockHealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHealthKitManager.swift; sourceTree = "<group>"; };
+		E0E416732BC2A772002E8CBE /* DailyMacroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMacroView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +121,10 @@
 		E01F4F302BB733060047B785 /* BBv1 */ = {
 			isa = PBXGroup;
 			children = (
+				E01F4F5E2BB745E40047B785 /* Views */,
+				E01F4F5B2BB733650047B785 /* BBv1.entitlements */,
+				E01F4F5C2BB733A20047B785 /* HealthKitManager.swift */,
+				E0E416712BC1E35A002E8CBE /* MockHealthKitManager.swift */,
 				E01F4F312BB733060047B785 /* BBv1App.swift */,
 				E01F4F332BB733060047B785 /* ContentView.swift */,
 				E01F4F352BB733070047B785 /* Assets.xcassets */,
@@ -125,6 +156,24 @@
 				E01F4F4E2BB733070047B785 /* BBv1UITestsLaunchTests.swift */,
 			);
 			path = BBv1UITests;
+			sourceTree = "<group>";
+		};
+		E01F4F5E2BB745E40047B785 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E01F4F5F2BB745F40047B785 /* ActivityView.swift */,
+				E01F4F642BB747870047B785 /* DailyStepCardView.swift */,
+				E0E4166D2BC1D66D002E8CBE /* PieChartView.swift */,
+				E0E4166F2BC1D799002E8CBE /* PieSliceView.swift */,
+				E0E416732BC2A772002E8CBE /* DailyMacroView.swift */,
+				E0E4166B2BC16C0B002E8CBE /* DateHeaderView.swift */,
+				E01F4F682BB95E530047B785 /* DailySleepCardView.swift */,
+				E01F4F722BBC25AE0047B785 /* DailyBodyWeightView.swift */,
+				E01F4F6A2BBB25A00047B785 /* WeeklyView.swift */,
+				E01F4F6E2BBB260F0047B785 /* WeeklyStepCardView.swift */,
+				E01F4F702BBC22AB0047B785 /* WeeklyMacrosView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +307,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01F4F342BB733060047B785 /* ContentView.swift in Sources */,
+				E01F4F602BB745F40047B785 /* ActivityView.swift in Sources */,
+				E0E416702BC1D799002E8CBE /* PieSliceView.swift in Sources */,
+				E0E4166E2BC1D66D002E8CBE /* PieChartView.swift in Sources */,
+				E01F4F652BB747870047B785 /* DailyStepCardView.swift in Sources */,
 				E01F4F322BB733060047B785 /* BBv1App.swift in Sources */,
+				E01F4F712BBC22AB0047B785 /* WeeklyMacrosView.swift in Sources */,
+				E0E4166C2BC16C0C002E8CBE /* DateHeaderView.swift in Sources */,
+				E01F4F692BB95E530047B785 /* DailySleepCardView.swift in Sources */,
+				E01F4F732BBC25AE0047B785 /* DailyBodyWeightView.swift in Sources */,
+				E01F4F5D2BB733A20047B785 /* HealthKitManager.swift in Sources */,
+				E01F4F6F2BBB260F0047B785 /* WeeklyStepCardView.swift in Sources */,
+				E01F4F6B2BBB25A00047B785 /* WeeklyView.swift in Sources */,
+				E0E416722BC1E35A002E8CBE /* MockHealthKitManager.swift in Sources */,
+				E0E416742BC2A772002E8CBE /* DailyMacroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,21 +481,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BBv1/BBv1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BBv1/Preview Content\"";
+				DEVELOPMENT_TEAM = 9CPBV5RBS8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "a descriptopn of why I need to share steps data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = dunno.BBv1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -447,21 +514,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BBv1/BBv1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BBv1/Preview Content\"";
+				DEVELOPMENT_TEAM = 9CPBV5RBS8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "a descriptopn of why I need to share steps data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = dunno.BBv1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
