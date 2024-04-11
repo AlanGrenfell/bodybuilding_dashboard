@@ -13,27 +13,28 @@ struct DailySleepCardView: View {
     
     @ObservedObject var healthKitManager: HealthKitManager
     
-    
-    //  @State var stepPercentage: Double = 0.0
-    //  @State var progressWidth: CGFloat
+    var formatter : NumberFormatter
     
     init( healthKitManager: HealthKitManager ) {
         
         self.healthKitManager = healthKitManager
-        
-        //    self.progressWidth = CGFloat(activityViewController.stepPercentage * barWidth)
+        self.formatter = NumberFormatter()
+        self.formatter.numberStyle = .decimal
+        self.formatter.minimumFractionDigits = 2
+        self.formatter.maximumFractionDigits = 2
     }
     
     var body: some View {
         VStack {
             // MARK: STEPS TODAY
             
-            Text("Sleep efficiency").font(.title3).fontWeight(.semibold)
+            Text("Time asleep").font(.title3).fontWeight(.semibold)
             VStack {
                 HStack(alignment: .bottom, spacing: 0) {
-                    Text("\(healthKitManager.sleepEfficiencyToday)").font(.system(size: 72, weight: .bold)).padding(.leading, 20)
-                    Image(systemName: "bed.double.circle").padding(.bottom, 14).padding(.leading, -2)
-                }.padding(.bottom, -16)
+                    Text(self.formatter.string(from: healthKitManager.timeAsleepToday as NSNumber)!).font(.system(size: 72, weight: .bold)).padding(.leading, 20)
+                    Text(" hours")
+//                    Image(systemName: "bed.double.circle").padding(.bottom, 14).padding(.leading, -2)
+                }.padding(.bottom, 0)
                 
             }
             

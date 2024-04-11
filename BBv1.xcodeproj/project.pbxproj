@@ -27,6 +27,7 @@
 		E0E416702BC1D799002E8CBE /* PieSliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4166F2BC1D799002E8CBE /* PieSliceView.swift */; };
 		E0E416722BC1E35A002E8CBE /* MockHealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416712BC1E35A002E8CBE /* MockHealthKitManager.swift */; };
 		E0E416742BC2A772002E8CBE /* DailyMacroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416732BC2A772002E8CBE /* DailyMacroView.swift */; };
+		E0E416762BC2FA13002E8CBE /* MFPButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416752BC2FA13002E8CBE /* MFPButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E0E4166F2BC1D799002E8CBE /* PieSliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSliceView.swift; sourceTree = "<group>"; };
 		E0E416712BC1E35A002E8CBE /* MockHealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHealthKitManager.swift; sourceTree = "<group>"; };
 		E0E416732BC2A772002E8CBE /* DailyMacroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMacroView.swift; sourceTree = "<group>"; };
+		E0E416752BC2FA13002E8CBE /* MFPButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFPButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				E01F4F5F2BB745F40047B785 /* ActivityView.swift */,
+				E0E416752BC2FA13002E8CBE /* MFPButtonView.swift */,
 				E01F4F642BB747870047B785 /* DailyStepCardView.swift */,
 				E0E4166D2BC1D66D002E8CBE /* PieChartView.swift */,
 				E0E4166F2BC1D799002E8CBE /* PieSliceView.swift */,
@@ -314,6 +317,7 @@
 				E01F4F322BB733060047B785 /* BBv1App.swift in Sources */,
 				E01F4F712BBC22AB0047B785 /* WeeklyMacrosView.swift in Sources */,
 				E0E4166C2BC16C0C002E8CBE /* DateHeaderView.swift in Sources */,
+				E0E416762BC2FA13002E8CBE /* MFPButtonView.swift in Sources */,
 				E01F4F692BB95E530047B785 /* DailySleepCardView.swift in Sources */,
 				E01F4F732BBC25AE0047B785 /* DailyBodyWeightView.swift in Sources */,
 				E01F4F5D2BB733A20047B785 /* HealthKitManager.swift in Sources */,

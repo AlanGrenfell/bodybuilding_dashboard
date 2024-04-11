@@ -124,8 +124,11 @@ struct PieChartRows: View {
                 }
             }
         }
+        .padding(.horizontal, 16)
     }
+
 }
+
 
 @available(OSX 10.15.0, *)
 struct PieChartView_Previews: PreviewProvider {

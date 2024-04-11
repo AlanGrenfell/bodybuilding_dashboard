@@ -12,7 +12,7 @@ import WidgetKit
 class HealthKitManager: ObservableObject {
   var healthStore = HKHealthStore()
 // steps
-  var stepCountToday: Int = 0
+  var stepCountToday: Int = 10123
   var stepCountYesterday: Int = 0
 
   var thisWeekSteps: [Int: Int] = [1: 0,
@@ -41,6 +41,7 @@ class HealthKitManager: ObservableObject {
     var fatAvgThisWeek: Int = 0
  // sleep
     var sleepEfficiencyToday: Int = 0
+    var timeAsleepToday: Double = 0
  // body weight
     var bodyWeight: Double = 0
 
@@ -84,6 +85,8 @@ class HealthKitManager: ObservableObject {
     readFatToday()
     readCaloriesToday()
     readBodyWeightToday()
+    readSleepAnalysis()
+// weekly
     readStepCountThisWeek()
     readMacrosThisWeek()
     thisWeekAvgCarbs()
@@ -181,9 +184,7 @@ class HealthKitManager: ObservableObject {
           return
         }
           // round to 2 dp
-          print("bodyweight")
           let bodyweight = Double(round(10 * sum.doubleValue(for: HKUnit.gramUnit(with: .kilo))) / 10)
-          print(bodyweight)
           self.bodyWeight = bodyweight
       }
       healthStore.execute(query)
@@ -245,7 +246,6 @@ class HealthKitManager: ObservableObject {
         }
 
           let fat = Int(sum.doubleValue(for: HKUnit.gram()))
-  //      print("Fetched your steps today: \(steps)")
           self.fatToday = fat
       }
       healthStore.execute(query)
@@ -430,7 +430,6 @@ class HealthKitManager: ObservableObject {
             return
         }
         
-        //    print("Attempting to get stepcount from \(startOfWeek) to \(endOfWeek)")
         
         let predicate = HKQuery.predicateForSamples(
             withStart: startOfWeek,
@@ -481,59 +480,106 @@ class HealthKitManager: ObservableObject {
         let sum =  self.thisWeekMacros.reduce(0) { $0 + $1.value }
         self.proteinAvgThisWeek = sum / 7
     }
-    
     func readSleepAnalysis() {
-        
+        let healthStore = HKHealthStore()
         let calendar = Calendar.current
-        let yesterday = calendar.date(byAdding: .day, value: -1, to: Date())
-        let startDate = calendar.startOfDay(for: yesterday!)
-        let endDate = calendar.startOfDay(for: Date())
+
+        let endDate = Date()
+        let startDate = calendar.date(byAdding: .day, value: -1, to: endDate)!
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictStartDate)
-        var timeInBed: Double = 0.0
-        var timeAsleep: Double = 0.0
-        
-        if let sleepType = HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis) {
-            
-            let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
-            // the block completion to execute
-            let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: 100000, sortDescriptors: [sortDescriptor]) { (query, tmpResult, error) -> Void in
-                if error != nil {
-                    // Handle the error in your app gracefully
-                    return
-                }
-                if let result = tmpResult {
-                    for item in result {
-                        if let sample = item as? HKCategorySample {
-                            switch sample.value {
-                            case 0:
-                                // inBed, write logic here
-                                print("inBed")
-                                if let sample = item as? HKCategorySample {
-                                    
-                                    timeInBed = sample.endDate.timeIntervalSince(sample.startDate)
-                                }
-                            case 1:
-                                // asleep, write logic here
-                                print("asleep")
-                                if let sample = item as? HKCategorySample {
-                                    
-                                    timeAsleep = sample.endDate.timeIntervalSince(sample.startDate)
-                                }
-                            default:
-                                // awake, write logic here
-                                print("awake")
-                            }
-                            
-                        }
+
+        let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+
+        let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) { _, results, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+
+            guard let results = results as? [HKCategorySample] else {
+                print("No data to display")
+                return
+            }
+
+            print("Start Date: \(startDate), End Date: \(endDate)")
+            print("Fetched \(results.count) sleep analysis samples.")
+
+            var totalSleepTime: TimeInterval = 0
+
+            for result in results {
+                if let type = HKCategoryValueSleepAnalysis(rawValue: result.value) {
+                    if HKCategoryValueSleepAnalysis.allAsleepValues.contains(type) {
+                        let sleepDuration = result.endDate.timeIntervalSince(result.startDate)
+                        
+                        totalSleepTime += sleepDuration
                     }
                 }
-                
-                self.sleepEfficiencyToday = Int(timeAsleep / timeInBed)
-                self.healthStore.execute(query)
             }
-            
+
+//            self.sleepEfficiencyToday = Int(totalSleepTime)
+            self.timeAsleepToday = Double(round(100*(totalSleepTime)/(60*60))/100)
+
         }
+
+        healthStore.execute(query)
     }
+    
+//    func readSleepAnalysis() {
+//        
+//        let calendar = Calendar.current
+//        let yesterday = calendar.date(byAdding: .day, value: -1, to: Date())
+//        let startDate = calendar.startOfDay(for: yesterday!)
+//        let endDate = calendar.startOfDay(for: Date())
+//        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictStartDate)
+//        var timeInBed: Double = 0.0
+//        var timeAsleep: Double = 0.0
+//        
+//        if let sleepType = HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis) {
+//            
+//            let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+//            // the block completion to execute
+//            let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: 100000, sortDescriptors: [sortDescriptor]) { (query, tmpResult, error) -> Void in
+//                if error != nil {
+//                    // Handle the error in your app gracefully
+//                    return
+//                }
+//                print("sleep tmpresult")
+//                print(tmpResult)
+//                
+//                if let result = tmpResult {
+//                    for item in result {
+//                        if let sample = item as? HKCategorySample {
+//                            switch sample.value {
+//                            case 0:
+//                                // inBed, write logic here
+//                                print("inBed")
+//                                if let sample = item as? HKCategorySample {
+//                                    
+//                                    timeInBed = sample.endDate.timeIntervalSince(sample.startDate)
+//                                }
+//                            case 1:
+//                                // asleep, write logic here
+//                                print("asleep")
+//                                if let sample = item as? HKCategorySample {
+//                                    
+//                                    timeAsleep = sample.endDate.timeIntervalSince(sample.startDate)
+//                                }
+//                            default:
+//                                // awake, write logic here
+//                                print("awake")
+//                            }
+//                            
+//                        }
+//                    }
+//                }
+//                
+//                self.sleepEfficiencyToday = Int(timeAsleep / timeInBed)
+//                self.healthStore.execute(query)
+//            }
+//            
+//        }
+//    }
             
             
             

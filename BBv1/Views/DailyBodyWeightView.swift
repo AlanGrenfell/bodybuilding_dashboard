@@ -30,6 +30,7 @@ struct DailyBodyWeightView: View {
             VStack {
                 HStack(alignment: .bottom, spacing: 0) {
                     Text(self.formatter.string(from: healthKitManager.bodyWeight as NSNumber)!).font(.system(size: 72, weight: .bold)).padding(.leading, 20)
+                    Text("kg")
 //                    Image(systemName: "scalemass").padding(.bottom, 14).padding(.leading, -2)
                 }.padding(.bottom, -16)
                 
