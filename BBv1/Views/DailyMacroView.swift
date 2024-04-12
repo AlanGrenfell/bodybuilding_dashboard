@@ -19,13 +19,13 @@ struct DailyMacroView: View {
     init( healthKitManager: HealthKitManager ) {
         
         self.healthKitManager = healthKitManager
-        self.macroVals  = [435, 213, 43]
-        self.kcal = 2430
+//        self.macroVals  = [435, 213, 43]
+//        self.kcal = 2430
         self.namesAndColors = [("carb", .blue),("protein", .orange),("fat", .green)]
         self.formatter = {value in String(format: "%.0f", value)}
-//        self.macroVals  = [healthKitManager.carbsToday, healthKitManager.proteinToday, healthKitManager.fatToday]
+        self.macroVals  = [healthKitManager.carbsToday, healthKitManager.proteinToday, healthKitManager.fatToday]
 //        self.macroNames = ["carb","protein","fat"]
-//        self.kcal = healthKitManager.caloriesToday
+        self.kcal = healthKitManager.caloriesToday
     }
     
     var body: some View {

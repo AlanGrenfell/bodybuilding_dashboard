@@ -28,6 +28,7 @@
 		E0E416722BC1E35A002E8CBE /* MockHealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416712BC1E35A002E8CBE /* MockHealthKitManager.swift */; };
 		E0E416742BC2A772002E8CBE /* DailyMacroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416732BC2A772002E8CBE /* DailyMacroView.swift */; };
 		E0E416762BC2FA13002E8CBE /* MFPButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416752BC2FA13002E8CBE /* MFPButtonView.swift */; };
+		E0E4167A2BC93A80002E8CBE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416792BC93A80002E8CBE /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		E0E416712BC1E35A002E8CBE /* MockHealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHealthKitManager.swift; sourceTree = "<group>"; };
 		E0E416732BC2A772002E8CBE /* DailyMacroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMacroView.swift; sourceTree = "<group>"; };
 		E0E416752BC2FA13002E8CBE /* MFPButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFPButtonView.swift; sourceTree = "<group>"; };
+		E0E416792BC93A80002E8CBE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				E01F4F682BB95E530047B785 /* DailySleepCardView.swift */,
 				E01F4F722BBC25AE0047B785 /* DailyBodyWeightView.swift */,
 				E01F4F6A2BBB25A00047B785 /* WeeklyView.swift */,
+				E0E416792BC93A80002E8CBE /* SettingsView.swift */,
 				E01F4F6E2BBB260F0047B785 /* WeeklyStepCardView.swift */,
 				E01F4F702BBC22AB0047B785 /* WeeklyMacrosView.swift */,
 			);
@@ -314,6 +317,7 @@
 				E0E416702BC1D799002E8CBE /* PieSliceView.swift in Sources */,
 				E0E4166E2BC1D66D002E8CBE /* PieChartView.swift in Sources */,
 				E01F4F652BB747870047B785 /* DailyStepCardView.swift in Sources */,
+				E0E4167A2BC93A80002E8CBE /* SettingsView.swift in Sources */,
 				E01F4F322BB733060047B785 /* BBv1App.swift in Sources */,
 				E01F4F712BBC22AB0047B785 /* WeeklyMacrosView.swift in Sources */,
 				E0E4166C2BC16C0C002E8CBE /* DateHeaderView.swift in Sources */,

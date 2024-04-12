@@ -8,20 +8,15 @@
 import SwiftUI
 
 struct DailyStepCardView: View {
-    let barWidth = CGFloat(240)
     
     
     @ObservedObject var healthKitManager: HealthKitManager
     
     
-    //  @State var stepPercentage: Double = 0.0
-    //  @State var progressWidth: CGFloat
-    
     init( healthKitManager: HealthKitManager ) {
         
         self.healthKitManager = healthKitManager
         
-        //    self.progressWidth = CGFloat(activityViewController.stepPercentage * barWidth)
     }
     
     var body: some View {

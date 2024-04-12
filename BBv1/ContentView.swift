@@ -42,8 +42,7 @@ struct ContentView: View {
   
   var body: some View {
       ZStack{
-          DateHeaderView()
-          Spacer()
+         
           TabView {
               ActivityView(
                 healthKitManager: healthKitManager
@@ -60,6 +59,7 @@ struct ContentView: View {
               .tabItem {
                   Label("Weekly trends", systemImage: "chart.line.uptrend.xyaxis")
               }
+              SettingsView().tabItem { Label("Settings", systemImage: "gearshape") }
           }
       }
   }

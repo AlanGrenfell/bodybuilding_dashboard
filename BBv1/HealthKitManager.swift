@@ -24,10 +24,10 @@ class HealthKitManager: ObservableObject {
                                    7: 0]
     var thisWeekStepsAvg: Int = 0
  // macros
-    var caloriesToday: Int = 0
-    var carbsToday: Int = 0
-    var proteinToday: Int = 0
-    var fatToday: Int = 0
+    var caloriesToday: Int = 2769
+    var carbsToday: Int = 532
+    var proteinToday: Int = 213
+    var fatToday: Int = 54
     
     var thisWeekMacros: [Int: Int] = [1: 0,
                                       2: 0,
@@ -41,9 +41,9 @@ class HealthKitManager: ObservableObject {
     var fatAvgThisWeek: Int = 0
  // sleep
     var sleepEfficiencyToday: Int = 0
-    var timeAsleepToday: Double = 0
+    var timeAsleepToday: Double = 7.56
  // body weight
-    var bodyWeight: Double = 0
+    var bodyWeight: Double = 88.1
 
   static let shared = HealthKitManager()
 
@@ -518,7 +518,9 @@ class HealthKitManager: ObservableObject {
             }
 
 //            self.sleepEfficiencyToday = Int(totalSleepTime)
-            self.timeAsleepToday = Double(round(100*(totalSleepTime)/(60*60))/100)
+            if totalSleepTime != 0 {
+                self.timeAsleepToday = Double(round(100*(totalSleepTime)/(60*60))/100)
+            }
 
         }
 
