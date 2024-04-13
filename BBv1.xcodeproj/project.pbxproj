@@ -29,6 +29,7 @@
 		E0E416742BC2A772002E8CBE /* DailyMacroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416732BC2A772002E8CBE /* DailyMacroView.swift */; };
 		E0E416762BC2FA13002E8CBE /* MFPButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416752BC2FA13002E8CBE /* MFPButtonView.swift */; };
 		E0E4167A2BC93A80002E8CBE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E416792BC93A80002E8CBE /* SettingsView.swift */; };
+		E0E4167E2BCAB53A002E8CBE /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4167D2BCAB53A002E8CBE /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		E0E416732BC2A772002E8CBE /* DailyMacroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMacroView.swift; sourceTree = "<group>"; };
 		E0E416752BC2FA13002E8CBE /* MFPButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFPButtonView.swift; sourceTree = "<group>"; };
 		E0E416792BC93A80002E8CBE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E0E4167D2BCAB53A002E8CBE /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		E01F4F302BB733060047B785 /* BBv1 */ = {
 			isa = PBXGroup;
 			children = (
+				E0E4167C2BCAB52B002E8CBE /* Data */,
 				E01F4F5E2BB745E40047B785 /* Views */,
 				E01F4F5B2BB733650047B785 /* BBv1.entitlements */,
 				E01F4F5C2BB733A20047B785 /* HealthKitManager.swift */,
@@ -180,6 +183,14 @@
 				E01F4F702BBC22AB0047B785 /* WeeklyMacrosView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E0E4167C2BCAB52B002E8CBE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E0E4167D2BCAB53A002E8CBE /* UserSettings.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +336,7 @@
 				E01F4F692BB95E530047B785 /* DailySleepCardView.swift in Sources */,
 				E01F4F732BBC25AE0047B785 /* DailyBodyWeightView.swift in Sources */,
 				E01F4F5D2BB733A20047B785 /* HealthKitManager.swift in Sources */,
+				E0E4167E2BCAB53A002E8CBE /* UserSettings.swift in Sources */,
 				E01F4F6F2BBB260F0047B785 /* WeeklyStepCardView.swift in Sources */,
 				E01F4F6B2BBB25A00047B785 /* WeeklyView.swift in Sources */,
 				E0E416722BC1E35A002E8CBE /* MockHealthKitManager.swift in Sources */,

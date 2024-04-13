@@ -9,9 +9,12 @@ import SwiftUI
 struct SettingsView: View {
     
     //  @ObservedObject var healthKitManager: HealthKitManager
+    let kcal_goal = Defaults.getKcalGoal().kcal_goal
     
     var body: some View {
-        Text("test")
+        Text(String(kcal_goal))
+        
+
     }
     
     
